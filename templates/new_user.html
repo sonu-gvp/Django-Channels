@@ -1,29 +1,84 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %}
-  New User
+New User
 {% endblock title %}
-
 {% block content %}
-  <h2>NEW USER</h2>           
-  <table class="table">
+<h2>NEW USER</h2>
+<table class="table">
     <thead>
-      <tr>
-        <th>username</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
+        <tr>
+            <th>username</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Last Login</th>
+        </tr>
     </thead>
     <tbody id="new_user">
-      {% include "includes/users.html" %}
+       
     </tbody>
-  </table>
-{% endblock content %}
+</table>
 
+<h2>TEST USER</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+    </thead>
+    <tbody id="test_user">
+        
+    </tbody>
+</table>
+
+<h2>Register USER</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody id="test_resigter">
+        
+    </tbody>
+</table>
+
+<h2>Excel Data</h2>
+<table class="table">
+    <tbody id="excel_data">
+        {% include 'includes/excel.html' %}
+    </tbody>
+</table>
+
+<h2>Hello Data</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+    </thead>
+    <tbody id="hello_data">
+        {% include 'includes/hello.html' %}
+    </tbody>
+</table>
+{% endblock content %}
 <!-- NEW -->
 {% block scripts %}
-	<script src="{% static 'js/channels/reconnecting-websocket.min.js'%}"></script>
-	<script src="{% static 'js/channels/new_user.js' %}"></script>
+<script src="{% static 'js/channels/reconnecting-websocket.min.js'%}"></script>
+<!-- <script src="{% static 'js/channels/test_user.js' %}"></script>
+<script src="{% static 'js/channels/new_user.js' %}"></script>
+<script src="{% static 'js/channels/excel.js' %}"></script>
+<script src="{% static 'js/channels/register.js' %}"></script> -->
+<script src="{% static 'js/channels/hello.js' %}"></script>
 {% endblock scripts %}

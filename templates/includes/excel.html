@@ -1,0 +1,10 @@
+{% for row in excel_data %}
+<tr>
+	<td>
+		{% for cell in row %}
+			{{ cell }}	
+		{% endfor %}
+	</td>
+</tr>
+<br>
+{% endfor %}

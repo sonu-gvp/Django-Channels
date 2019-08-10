@@ -7,8 +7,12 @@ application = ProtocolTypeRouter({
     'websocket': AuthMiddlewareStack(
     	URLRouter(
     		[
-    			path("new-user/", NewUserConsumer),
+    			# path("new-user/", NewUserConsumer),
+                path("hello/", NewUserConsumer),
     		]
     	)
     )
+    # 'websocket' : URLRouter([
+    # 	path("hello/", NewUserConsumer),
+    # 	])
 })
